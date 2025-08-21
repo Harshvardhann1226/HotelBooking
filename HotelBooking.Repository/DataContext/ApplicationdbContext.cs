@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HotelBooking.Domain.Entity;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,12 @@ using System.Threading.Tasks;
 
 namespace HotelBooking.Repository.DataContext
 {
-    public class ApplicationdbContext
+    public class ApplicationdbContext:DbContext
     {
+        public ApplicationdbContext(DbContextOptions<ApplicationdbContext> options) : base(options)
+        {
+        }
+        public DbSet<Villa> Villas { get; set; }
+        public DbSet<Employee> Employees { get; set; }  
     }
 }

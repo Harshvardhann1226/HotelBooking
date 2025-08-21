@@ -1,6 +1,13 @@
+using HotelBooking.Repository.DataContext;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<ApplicationdbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConn"));
+});
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

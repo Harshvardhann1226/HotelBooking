@@ -17,6 +17,7 @@ namespace HotelBooking.Domain.Entity
         public string ?ImageUrl { get; set; }
         public DateTime CretedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
+        public bool IsActive { get; set; }
 
     }
 }
