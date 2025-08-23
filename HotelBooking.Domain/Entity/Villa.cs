@@ -15,9 +15,9 @@ namespace HotelBooking.Domain.Entity
         public string ?Sqft { get; set; }
         public string ?Occupency { get; set; }
         public string ?ImageUrl { get; set; }
-        public DateTime CretedDate { get; set; }
+        public DateTime ?CretedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
-        public bool IsActive { get; set; }
+        
 
     }
 }

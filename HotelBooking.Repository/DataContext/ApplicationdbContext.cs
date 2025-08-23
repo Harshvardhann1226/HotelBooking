@@ -8,12 +8,17 @@ using System.Threading.Tasks;
 
 namespace HotelBooking.Repository.DataContext
 {
-    public class ApplicationdbContext:DbContext
+    public class ApplicationdbContext : DbContext
     {
         public ApplicationdbContext(DbContextOptions<ApplicationdbContext> options) : base(options)
         {
         }
         public DbSet<Villa> Villas { get; set; }
-        public DbSet<Employee> Employees { get; set; }  
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Villa>().HasData();
+        }
+        //public DbSet<Employee> Employees { get; set; }  
     }
 }

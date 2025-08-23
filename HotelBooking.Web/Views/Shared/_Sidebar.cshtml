@@ -1,0 +1,28 @@
+﻿<div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 250px; height: 100vh;">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <span class="fs-4">HotelBooking</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="Villa" asp-action="VillaIndex">
+                <i class="bi bi-house"></i> Home
+            </a>
+        </li>
+        <li>
+            <a class ="nav-link" asp-controller="Villa" asp-action="CreateVilla">
+                <i class="bi bi-house-add"></i> CreateVilla
+            </a>
+        </li>
+        <li>
+            <a href="/Booking/Index" class="nav-link text-dark">
+                <i class="bi bi-calendar"></i> Bookings
+            </a>
+        </li>
+        <li>
+            <a href="/Account/Logout" class="nav-link text-dark">
+                <i class="bi bi-box-arrow-right"></i> Logout
+            </a>
+        </li>
+    </ul>
+</div>
